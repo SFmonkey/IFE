@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0
+}
+
+body{
+  background-color: #dedede
+}
+
+header{
+  box-sizing: border-box;
+  width: 100%;
+  height: 72px;
+  padding: 10px;
+  background-color:#f1cc47
+}
+
+header > h1{
+  display: inline-block;
+}
+
+header h1 a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  background-size: cover;
+  background-image: url('task-1.jpg');
+  background-position: 0 -20px
+}
+
+header > ul{
+  padding: 5px 10px;
+  margin: 10px 0;
+  list-style: none;
+  float: right
+}
+
+header ul li{
+  display: inline-block;
+}
+
+header ul li a{
+  height: 20px;
+  padding-left: 5px;
+  text-decoration: none;
+  text-align: 20px;
+  font-size: 14px;
+  color: #fff
+}
+
+article,aside{
+  padding: 20px;
+  margin: 20px;
+  background: white
+}
+
+article h2{
+  padding: 10px 0
+}
+
+article h3{
+  padding: 5px 0;
+  color: #6b7274
+}
+
+article p{
+  text-indent: 2em;
+  line-height: 1.5em;
+}
+
+article img{
+  padding: 20px 0;
+}
+
+article ul {
+  list-style: none;
+  padding: 0 20px
+}
+
+article ul li{
+  line-height: 1.5em
+}
+
+article dl dd{
+  width: 150px;
+  margin: 20px 10px;
+  border: 1px solid #000
+}
+
+article dl dd p{
+  text-align: center;
+  text-indent: 0
+}
+
+article dl dd img {
+  width: 130px;
+  height: 180px;
+  padding:0 10px 10px
+}
+
+article ol {
+  margin: 10px 40px
+}
+
+article table{
+  width: 100%;
+  border-collapse: collapse
+}
+
+article table tbody{
+  border: 1px solid #b9b9b9
+}
+
+article table tbody tr th{
+  color: #fff;
+  background-color: #f1cc47
+}
+
+article table tbody tr td{
+  font-size: 14px;
+}
+
+article table tbody tr:nth-last-child(1){
+  background-color: #b9b9b9
+}
+
+aside h4{
+  line-height: 30px;
+  padding: 0 10px;
+  border-left: 3px solid #b9b9b9
+}
+
+aside form div{
+  font-size: 14px;
+  margin:10px
+}
+
+.explain{
+  box-sizing: border-box;
+  display: inline-block;
+  padding-right: 10px;
+  text-align: right;
+  width: 40%
+}
+
+.explain:last-of-type{
+  vertical-align: top
+}
+
+aside form div p{
+  padding: 5px 5px 20px;
+  margin-left: 40%;
+  text-align: left;
+  font-size: 10px;
+  color: #b9b9b9
+}
+
+aside form div textarea{
+  width: 30%;
+  height:80px
+}
+
+aside form input[type="button"] {
+  width: 100%;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #f1cc47;
+  color: #fff;
+  background-color: #f1cc47
+}
+
+footer{
+  width: 100%;
+  height: 72px;
+  line-height: 72px;
+  font-size: 14px;
+  text-align: center;
+  color:#fff;
+  background: #f1cc47
+}
