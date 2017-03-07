@@ -1,0 +1,118 @@
+table {
+  thead tr td {
+    color: #fff;
+    background-color: #000
+  }
+  tbody tr {
+    color: #000;
+    &:nth-child(-n+3){
+      color: red;
+    }
+    &:nth-child(2n){
+      background-color: #bbb
+    }
+  }
+}
+
+input{
+  &:focus {
+    width: 200px;
+    border-color: cornflowerblue
+  }
+  width:100px;
+  border:2px solid #ddd;
+  margin:30px;
+  transition:border-color,width .5s;
+  box-sizing:border-box
+}
+
+.Carousel{
+  position: relative;
+  width: 250px;
+  height:150px;
+  overflow: hidden;
+  background-color: red;
+  .pics {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+    padding:0;
+    margin: 0;
+    animation: .5s pics-init linear;
+    li{
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      left: -100%;
+      animation: .5s pics-out linear;
+      &:target {
+        left: 0%;
+        animation: .5s pics-in linear;
+      }
+    }
+  }
+}
+
+#pic-1{
+  background-color: green;
+}
+#pic-2{
+  background-color: blue;
+}
+#pic-3{
+  background-color: red;
+}
+
+@keyframes pics-init {
+  0% {
+    left: -100%
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes pics-out {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes pics-in {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.button{
+  display: flex;
+  flex-flow: row nowrap;
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  a{
+    box-sizing: border-box;
+    flex:1;
+    display: block;
+    padding: 10px;
+    margin-left: 2px;
+    text-decoration: none;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
