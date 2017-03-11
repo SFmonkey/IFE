@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>零基础JavaScript编码（二）</title>
+  </head>
+  <body>
+    <h3>污染城市列表</h3>
+    <ul id="aqi-list">
+
+    </ul>
+    <script type="text/javascript">
+
+      var aqiData = [
+        ["北京", 90],
+        ["上海", 50],
+        ["福州", 10],
+        ["广州", 50],
+        ["成都", 90],
+        ["西安", 100]
+      ];
+
+      (function (data) {
+        var temp = [],
+            n = "";
+        var aqi = document.getElementById("aqi-list");
+        //选出符合条件的城市
+        for (var i = 0; i < data.length; i++) {
+          if (aqiData[i][1] > 60) {
+            temp.push(aqiData[i]);
+          }
+        }
+        //对符合的城市进行排序
+        temp.sort(function(a,b){
+           return b[1]-a[1];
+         });
+         //存入变量
+         for (var i = 0; i < temp.length; i++) {
+           n += "<li>第" + (i+1) + "名:" + temp[i][0] + "," + temp[i][1] + "</li>";
+         }
+
+        aqi.innerHTML = n;
+      })(aqiData);
+
+    </script>
+  </body>
+</html>
