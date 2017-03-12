@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>基础JavaScript练习（一）</title>
+    <style media="screen">
+      span{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+        text-align: center;
+        line-height: 35px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="name" value="">
+    <input type="button" name="name" value="左侧入">
+    <input type="button" name="name" value="右侧入">
+    <input type="button" name="name" value="左侧出">
+    <input type="button" name="name" value="右侧出">
+    <div id="display">
+
+    </div>
+    <script type="text/javascript">
+
+      temp = [];
+
+      var dis = document.getElementById('display');
+
+      var $ = function(tag){
+        return document.getElementsByTagName(tag);
+      };
+
+      var leftInsert = function(){
+        temp.unshift($('input')[0].value);
+        display(temp);
+      };
+
+      var rightInsert = function(){
+        temp.push($('input')[0].value);
+        display(temp);
+      };
+
+      var leftOut = function(){
+        if (!isEmpty(temp)) {
+          temp.shift();
+          display(temp);
+        }else{
+          alert('the queue is empty!');
+        }
+      };
+
+      var rightOut = function(){
+        if(!isEmpty(temp)){
+          temp.pop();
+          display(temp);
+        }else {
+          alert('the queue is empty!');
+        }
+      };
+
+      var isEmpty = function(data){
+        return (data.length === 0);
+      };
+
+      var display = function(data){
+        var n = '';
+        for (var i = 0; i < data.length; i++) {
+          n += "<span>" + data[i] + "</span>";
+        }
+        dis.innerHTML = n;
+        delEvent();
+      };
+
+      var deleted = function(i){
+        temp.splice(i,1);
+        display(temp);
+      };
+
+
+      $('input')[1].onclick = leftInsert;
+      $('input')[2].onclick = rightInsert;
+      $('input')[3].onclick = leftOut;
+      $('input')[4].onclick = rightOut;
+
+      function delEvent(){
+          for (var i = 0; i < dis.children.length; i++) {
+            (function(){
+              var p = i;
+              dis.children[i].onclick = function(){
+                deleted(p);
+              }
+            })()
+          };
+        }
+
+
+
+    </script>
+  </body>
+</html>
