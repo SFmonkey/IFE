@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript和树（一）</title>
+    <style media="screen">
+      div{
+        width: auto;
+        box-sizing: border-box;
+        border:1px solid #bbb
+      }
+      .input{
+        float: left;
+        display: block;
+        margin-left: 20px;
+        border: 0
+      }
+      .root{
+        float: left;
+        width: 600px;
+        height: 150px;
+        padding:15px 10px;
+      }
+      .left, .right{
+        width: 49%;
+        height: 100%;
+        padding:15px 10px;
+      }
+      .left{
+        float: left;
+      }
+      .right{
+        float: right;
+      }
+      .left-left, .left-right, .right-left, .right-right{
+        width: 49%;
+        height: 100%;
+        padding:15px 10px;
+      }
+      .left-left, .right-left{
+        float:left;
+      }
+      .left-right, .right-right{
+        float:right;
+      }
+      .left-left-left, .left-left-right, .left-right-left, .left-right-right, .right-left-left, .right-left-right, .right-right-left, .right-right-right{
+        width: 49%;
+        height: 100%;
+      }
+      .left-left-left, .left-right-left, .right-left-left, .right-right-left{
+        float: left;
+      }
+      .left-left-right, .left-right-right, .right-left-right, .right-right-right{
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <div class="left">
+        <div class="left-left">
+          <div class="left-left-left">
+
+          </div>
+          <div class="left-left-right">
+
+          </div>
+        </div>
+        <div class="left-right">
+          <div class="left-right-left">
+
+          </div>
+          <div class="left-right-right">
+
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="right-left">
+          <div class="right-left-left">
+
+          </div>
+          <div class="right-left-right">
+
+          </div>
+        </div>
+        <div class="right-right">
+          <div class="right-right-left">
+
+          </div>
+          <div class="right-right-right">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="input">
+      <input type="button" name="name" value="先序">
+      <input type="button" name="name" value="中序">
+      <input type="button" name="name" value="后序">
+    </div>
+    <script src="demo.js" charset="utf-8"></script>
+  </body>
+</html>
