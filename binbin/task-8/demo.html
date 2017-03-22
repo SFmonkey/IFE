@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript和树（一）</title>
+    <style media="screen">
+      div{
+        padding: 10px 5px;
+        border: 2px solid #bbb
+      }
+      .box{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 1400px;
+        height: 200px;
+
+      }
+      .child1{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        flex: 2;
+      }
+      .child2{
+        flex: 1;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+      .child2{
+        flex: 0.5;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+      .normal{
+        background-color: #fff
+      }
+      .current{
+        background-color: #bbb
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="name" value="">
+    <button type="button" name="button">BFC</button>
+    <button type="button" name="button">DFC</button>
+    <section>
+      <div class="box">
+        Super
+        <div class="child1">
+          Cat
+          <div class="child1">
+            Apple
+            <div class="child2">
+              Pear
+            </div>
+            <div class="child2">
+              Pig
+            </div>
+            <div class="child2">
+              Cola
+            </div>
+            <div class="child2">
+              Soccer
+            </div>
+          </div>
+          <div class="child2">
+            Phone
+          </div>
+          <div class="child2">
+            <div class="child2">
+              Book
+            </div>
+            <div class="child2">
+              School
+            </div>
+          </div>
+        </div>
+        <div class="child1">
+          Note
+          <div class="child2">
+            Human
+            <div class="child2">
+              Code
+            </div>
+            <div class="child2">
+              Operate
+            </div>
+            <div class="child2">
+              Man
+            </div>
+          </div>
+          <div class="child2">
+            Program
+            <div class="child1">
+              Bement
+              <div class="child2">
+                Cat
+              </div>
+            </div>
+            <div class="child2">
+              Glass
+            </div>
+          </div>
+        </div>
+        <div class="child2">
+          Fish
+        </div>
+      </div>
+    </section>
+    <script src="demo.js" charset="utf-8"></script>
+  </body>
+</html>
