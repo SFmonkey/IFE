@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>表单（一）单个表单项的检验</title>
+    <style media="screen">
+      main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      form{
+        padding: 5px;
+        margin-top: 200px;
+      }
+      form label{
+        margin-top: 10px;
+        padding-top: 5px;
+        font-size: 24px;
+        margin-right: 10px
+      }
+      form input{
+        height: 24px;
+      }
+      form button{
+        padding: 5px;
+        background-color: #2f79ba;
+        color: #fff;
+        border: 1px solid #2f79ba;
+        border-radius: 2px;
+      }
+      .name{
+        font-size: 24px;
+        padding-right: 10px;
+        width: 50px;
+        float: left;
+      }
+      #tips{
+        padding: 10px 0 0 58px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form>
+        <div class="name">名称</div>
+        <input type="text" name="name" id="input">
+        <button type="button" name="button" id="sub">验证</button>
+        <div id="tips"></div>
+      </form>
+    </main>
+    <script src="demo.js" charset="utf-8"></script>
+  </body>
+</html>
