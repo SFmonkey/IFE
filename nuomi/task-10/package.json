@@ -1,0 +1,29 @@
+{
+  "name": "task-10",
+  "preferGlobal": false,
+  "version": "0.2.3",
+  "author": "Zihan05 <windgoole0509@gmail.com>",
+  "description": "A project of regular",
+  "keywords": [
+    "karma",
+    "mocha"
+  ],
+  "dependencies": {
+    "karma-should ": "^1.0.0",
+    "colors": "^0.6.2",
+    "karma": "^0.12.22",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-coverage": "^0.2.6",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-mocha-reporter": "^1.1.3",
+    "karma-mocha": "^0.1.8",
+    "karma-htmlfilealt-reporter": "~0.1",
+    "mocha": "^1.21.4"
+  },
+  "analyze": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.28",
+    "npm": ">=1.4.9"
+  }
+}
